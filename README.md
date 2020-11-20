@@ -33,11 +33,11 @@ yarn test
 libraries: [
     {
         text: 'React.js',
-        href: 'https://vuejs.org/'
+        href: 'https://pt-br.reactjs.org/'
     },
     {
         text: 'Redux',
-        href: 'https://https://vuetifyjs.com'
+        href: 'https://redux.js.org/'
     },
    ]
 ```

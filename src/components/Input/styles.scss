@@ -1,0 +1,32 @@
+@import '../../assets/styles/';
+
+
+.input-container{
+    width: '100%';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    padding: 0 2em;
+    position: relative;
+    .input{
+        background-color: color('neutral','100');
+        border: none;
+        height: 2.5em;
+        border-radius: 51px;
+        width: 100%;
+        text-align: center;
+        @include tipography('subtitle'); 
+        &::placeholder {
+            @include tipography('subtitle'); 
+        }
+        &:focus {
+            outline: none !important;
+        }
+    }
+    .input-icon{
+        position: absolute;
+        right: 2em;
+        fill: color('neutral', '200');
+    }
+}

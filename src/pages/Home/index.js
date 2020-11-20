@@ -1,12 +1,20 @@
 import React from "react";
-import { Button, TopHeader } from "../../components";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Button, TopHeader, Input, Card } from "../../components";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <TopHeader />
-    </div>
+
+      <Input
+        placeholder="Digite o nome de um usuário para realizar a busca"
+        icon={faSearch}
+        iconSize="lg"
+      />
+
+      <Card>aaa</Card>
+    </>
   );
 };
 

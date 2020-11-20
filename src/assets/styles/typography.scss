@@ -6,6 +6,20 @@
       font-size: 24px;
       line-height: 28,13px;
     }
+    @if($tipography == 'subtitle') {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @if($tipography == 'subtitle-mobile') {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+    }
     @if($tipography == 'body') {
       font-family: 'Roboto';
       font-style: normal;
