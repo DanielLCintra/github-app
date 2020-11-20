@@ -2,6 +2,9 @@
 
 Bem vindo ao projeto easy carros app.
 
+## Protótipo no Figma
+
+[Protótipo](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
 ## Preview
 
