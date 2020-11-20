@@ -16,10 +16,10 @@ O app guarda o histório das buscas realizas e permite que através de um menu l
 
 ## Protótipo no Figma
 
-[Protótipo](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
+[Visualizar](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
 ## Demonstração
--- Futuro link de demonstração
+[Visualizar](https://daniellcintra.github.io/apps/github-app)
 
 ## Instalação do Projeto
 ```
