@@ -5,7 +5,7 @@ Bem vindo ao projeto easy carros app.
 
 ## Preview
 
-![](https://prnt.sc/vmud46)
+![My image](https://prnt.sc/vmud46)
 
 
 ## Project setup
@@ -33,11 +33,11 @@ yarn test
 libraries: [
     {
         text: 'React.js',
-        href: 'https://vuejs.org/'
+        href: 'https://pt-br.reactjs.org/'
     },
     {
         text: 'Redux',
-        href: 'https://https://vuetifyjs.com'
+        href: 'https://redux.js.org/'
     },
    ]
 ```
