@@ -2,7 +2,6 @@
 
 
 .input-container{
-    width: '100%';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,7 @@
         background-color: color('neutral','100');
         border: none;
         height: 2.5em;
-        border-radius: 51px;
+        border-radius: 25px;
         width: 100%;
         text-align: center;
         @include tipography('subtitle'); 

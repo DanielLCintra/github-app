@@ -13,7 +13,7 @@ const Home = () => {
         iconSize="lg"
       />
 
-      <Card>aaa</Card>
+      <Card />
     </>
   );
 };
