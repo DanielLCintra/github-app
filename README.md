@@ -5,7 +5,7 @@ Bem vindo ao projeto easy carros app.
 
 ## Preview
 
-![My image](https://prnt.sc/vmud46)
+![My image](https://daniellcintra.github.io/images/githubapp.png)
 
 
 ## Project setup
