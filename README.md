@@ -1,17 +1,27 @@
 # Github App
 
-Bem vindo ao projeto easy carros app.
+Bem vindo ao projeto github app.
 
-## Protótipo no Figma
+Este projeto tem o obejtivo de dar a possibilidade do usuário:
+1 - Consultar um nome de usuário do github.
+2 - visualizar o perfil do usuário.
+3 - Visualizar os repositórios do usuário consultado.
+4 - Visualizar os favoristos do usuário consultado.
 
-[Protótipo](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
+O app guarda o histório das buscas realizas e permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
 
 ## Preview
 
 ![My image](https://daniellcintra.github.io/images/githubapp.png)
 
+## Protótipo no Figma
 
-## Project setup
+[Protótipo](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
+
+## Demonstração
+-- Futuro link de demonstração
+
+## Instalação do Projeto
 ```
 yarn install
 ```
