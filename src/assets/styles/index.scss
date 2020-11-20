@@ -1,0 +1,9 @@
+@import './colors.scss';
+@import './typography.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: color('neutral', '200');
+}

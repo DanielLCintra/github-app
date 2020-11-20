@@ -1,0 +1,15 @@
+@import '../../assets/styles/';
+
+.top-header {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color('primary', 'default');
+    .title {
+        @include tipography('title'); 
+        text-transform: uppercase;
+        color: color('neutral', '100');
+    }
+}

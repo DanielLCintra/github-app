@@ -1,0 +1,31 @@
+$colors: (
+  "primary": (
+    "default": #00C6CC,
+    "dark": #000000,
+    "light": #EBF0FF,
+    "accent": #D3FF00,
+  ),
+  "neutral": (
+    "100": #FFFFFF,
+    "200": #F5F6FA,
+    "300": #EDF1F7,
+    "400": #E2E5EB,
+    "500": #C4CDD5,
+    "600": #8990A2,
+    "700": #637381,
+    "800": #2E3A59,
+    "900": #1A2237,
+    "1000": #000000,
+  ),
+  "state": (
+    "danger": #FF2D55,
+    "success": #08B08B,
+    "warning": #F58C3D, 
+  ),
+);
+
+@function color($color: 'primary', $variant: 'default') {
+  $map: map-get($colors, $color);
+  $map: map-get($map, $variant);
+  @return $map;
+}

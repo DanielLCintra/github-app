@@ -1,0 +1,21 @@
+@import '../../assets/styles/';
+
+.button {
+    border: 0;
+    background: none;
+    text-transform: uppercase;
+     @include tipography('button');
+    &:focus {
+        outline: none !important;
+    }
+    &.state-accent {
+        background-color: color('primary', 'accent');
+        color: color('primary', 'dark');
+    }
+    &.rounded {
+        border-radius: 51px;
+    }
+    &.size-big {
+        height: 44px;
+    }
+}
