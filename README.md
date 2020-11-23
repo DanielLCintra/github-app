@@ -23,7 +23,7 @@ Observação: O app guarda o histório das buscas realizas e permite que atravé
 [Visualizar](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
 ## Demonstração
-Em breve.
+[Visualizar](https://github-app-d.herokuapp.com/)
 
 ## Instalação do Projeto
 ```
