@@ -3,9 +3,13 @@
 Bem vindo ao projeto github app.
 
 Este projeto tem o objetivo de dar a possibilidade do usuário:
+&nbsp;
 1 - Consultar um nome de usuário do github.
+&nbsp;
 2 - Visualizar o perfil do usuário.
+&nbsp;
 3 - Visualizar os repositórios do usuário consultado.
+&nbsp;
 4 - Visualizar os favoritos do usuário consultado.
 
 O app guarda o histório das buscas realizas e permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
