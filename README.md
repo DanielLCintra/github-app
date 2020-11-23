@@ -2,7 +2,7 @@
 
 Olá, seja bem vindo ao projeto github app.
 
-Este projeto possibilita:
+## Este projeto possibilita:
 
 1 - A consulta um nome de usuário do github.
 
