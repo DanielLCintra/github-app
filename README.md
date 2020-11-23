@@ -2,11 +2,11 @@
 
 Bem vindo ao projeto github app.
 
-Este projeto tem o obejtivo de dar a possibilidade do usuário:
+Este projeto tem o objetivo de dar a possibilidade do usuário:
 1 - Consultar um nome de usuário do github.
-2 - visualizar o perfil do usuário.
+2 - Visualizar o perfil do usuário.
 3 - Visualizar os repositórios do usuário consultado.
-4 - Visualizar os favoristos do usuário consultado.
+4 - Visualizar os favoritos do usuário consultado.
 
 O app guarda o histório das buscas realizas e permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
 
@@ -19,7 +19,7 @@ O app guarda o histório das buscas realizas e permite que através de um menu l
 [Visualizar](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
 ## Demonstração
-[Visualizar](https://daniellcintra.github.io/apps/github-app)
+Em breve.
 
 ## Instalação do Projeto
 ```
