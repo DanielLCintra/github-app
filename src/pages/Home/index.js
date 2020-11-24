@@ -25,15 +25,16 @@ const Home = () => {
         icon={faSearch}
         iconSize="4x"
         handleEnter={(e) => {
+          dispatch(setUser({ user: {} }));
           dispatch(getUser(e.target.value));
         }}
         handleClick={(value) => {
+          dispatch(setUser({ user: {} }));
           dispatch(getUser(value));
         }}
       />
 
       {isLoading && <CardLoading />}
-
       {!!user.userinfo.username && (
         <CardUser
           user={user}
