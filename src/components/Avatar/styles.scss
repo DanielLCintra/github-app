@@ -1,0 +1,9 @@
+@import '../../assets/styles/';
+
+.avatar {
+    &.size-big {
+        width: 200px;
+        height: 200px;
+        border-radius: 120px;
+    }
+}

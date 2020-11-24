@@ -1,0 +1,67 @@
+@import '../../assets/styles/';
+
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        flex-direction: row;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header {
+        position: absolute;
+        top: 0;
+        @include tipography('subtitle'); 
+    }
+    .content-container {
+        padding-top: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .main-title {
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            .main-title-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                .main-title-text-name {
+                    @include tipography('title'); 
+                }
+                .main-title-text-email {
+                    @include tipography('caption'); 
+                }
+                .main-title-text-user {
+                    @include tipography('caption'); 
+                }
+            }
+        }
+        .details{
+            @include tipography('body');
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            width: 70%;
+            .details-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p {
+                    @include tipography('subtitle');
+                }
+            }
+            .details-buttons {
+                display: flex;
+                justify-content: space-between;
+                
+            }
+        }
+    }
+}
