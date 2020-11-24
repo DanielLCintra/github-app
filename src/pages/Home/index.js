@@ -1,8 +1,21 @@
 import React from "react";
-import { Button, TopHeader, Input, Card } from "../../components";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  Button,
+  TopHeader,
+  Input,
+  CardUser,
+  CardLoading,
+} from "../../components";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { getUser } from "../../redux/middleware";
+import { setUser } from "../../redux/slices/userSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const user = useSelector((state) => state.userReducer.user);
+  const isLoading = useSelector((state) => state.genericReducer.loading);
   return (
     <>
       <TopHeader />
@@ -11,9 +24,21 @@ const Home = () => {
         placeholder="Digite o nome de um usuário para realizar a busca"
         icon={faSearch}
         iconSize="lg"
+        handleEnter={(e) => {
+          dispatch(getUser(e.target.value));
+        }}
       />
 
-      <Card />
+      {isLoading && <CardLoading />}
+
+      {!!user.userinfo.username && (
+        <CardUser
+          user={user}
+          handleClose={() => dispatch(setUser({ user: {} }))}
+          handleClickRepos={() => alert("repositórios")}
+          handleClickStars={() => alert("favoritos")}
+        />
+      )}
     </>
   );
 };

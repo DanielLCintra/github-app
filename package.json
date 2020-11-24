@@ -1,9 +1,9 @@
 {
-  "name": "github-app",
+  "name": "github-app", 
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "12.18.3"
+    "node": "12.18.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -32,6 +32,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

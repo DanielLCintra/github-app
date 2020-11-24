@@ -13,6 +13,13 @@
       font-size: 18px;
       line-height: 20px;
     }
+    @if($tipography == 'caption') {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 18px;
+    }
     @if($tipography == 'subtitle-mobile') {
       font-family: 'Roboto';
       font-style: normal;

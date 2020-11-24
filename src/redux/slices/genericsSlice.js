@@ -4,7 +4,7 @@ const pjson = require("../../../package.json");
 const genericsSlice = createSlice({
   name: "generic",
   initialState: {
-    loading: true,
+    loading: false,
     error: false,
     success: false,
     icon: "AlertCircle",
