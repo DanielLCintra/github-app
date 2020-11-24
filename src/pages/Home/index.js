@@ -9,7 +9,7 @@ import {
 } from "../../components";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { getUser } from "../../redux/middleware";
-import { setUser } from "../../redux/slices/userSlice";
+import { setUser } from "../../redux/slices/user.slice";
 
 const Home = () => {
   const dispatch = useDispatch();

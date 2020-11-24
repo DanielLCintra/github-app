@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import genericReducer from "./genericsSlice";
-import userReducer from "./userSlice";
+import genericReducer from "./generics.slice";
+import userReducer from "./user.slice";
 
 export default combineReducers({
   genericReducer,
