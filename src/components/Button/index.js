@@ -8,7 +8,7 @@ const Button = ({
   rounded = false,
   state = "default",
   size = "default",
-  iconSize='lg',
+  iconSize = "lg",
   style,
   icon,
 }) => {
@@ -21,7 +21,7 @@ const Button = ({
       style={style}
     >
       {!!label && label}
-      {!!icon && <FontAwesomeIcon icon={icon} size={iconSize} />}
+      {!!icon && <FontAwesomeIcon icon={icon} size={iconSize} color="gray" />}
     </button>
   );
 };

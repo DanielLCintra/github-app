@@ -23,9 +23,12 @@ const Home = () => {
       <Input
         placeholder="Digite o nome de um usuário para realizar a busca"
         icon={faSearch}
-        iconSize="lg"
+        iconSize="4x"
         handleEnter={(e) => {
           dispatch(getUser(e.target.value));
+        }}
+        handleClick={(value) => {
+          dispatch(getUser(value));
         }}
       />
 
