@@ -1,0 +1,33 @@
+@import '../../assets/styles/';
+
+.pagination-container {
+    background-color: color('neutral', '200');
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    height: 2.5em;
+    .pagination-left {
+        margin-left: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 15%;
+        justify-content: space-between;
+        p {
+            @include tipography('caption-bold');  
+        }
+    }
+    .pagination-right {
+        margin-right: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 12%;
+        justify-content: space-between;
+        p {
+            @include tipography('caption-bold');  
+        }
+    }
+}

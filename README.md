@@ -32,6 +32,11 @@ yarn install
 
 ### Compilar e hot reload para desenvolvimento
 ```
+yarn dev
+```
+
+### Rodar bundle de produção
+```
 yarn start
 ```
 

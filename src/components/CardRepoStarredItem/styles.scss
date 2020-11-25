@@ -1,0 +1,11 @@
+@import '../../assets/styles/';
+
+.card-item{
+    height: 114px;
+    background-color: color('neutral', '200');
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tipography('subtitle'); 
+}

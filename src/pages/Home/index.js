@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Button,
@@ -6,6 +6,7 @@ import {
   Input,
   CardUser,
   CardLoading,
+  CardRepoStarred,
 } from "../../components";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { getUser } from "../../redux/middleware";
@@ -16,6 +17,9 @@ const Home = () => {
 
   const user = useSelector((state) => state.userReducer.user);
   const isLoading = useSelector((state) => state.genericReducer.loading);
+
+  let [showRepos, setShowRepos] = useState(false);
+  let [showStarred, setShowStarred] = useState(false);
   return (
     <>
       <TopHeader />
@@ -39,8 +43,22 @@ const Home = () => {
         <CardUser
           user={user}
           handleClose={() => dispatch(setUser({ user: {} }))}
-          handleClickRepos={() => alert("repositórios")}
-          handleClickStars={() => alert("favoritos")}
+          handleClickRepos={() => setShowRepos(true)}
+          handleClickStars={() => setShowStarred(true)}
+        />
+      )}
+
+      {showRepos && (
+        <CardRepoStarred
+          title="Repositórios"
+          handleClose={() => setShowRepos(false)}
+        />
+      )}
+
+      {showStarred && (
+        <CardRepoStarred
+          title="Favoritos"
+          handleClose={() => setShowStarred(false)}
         />
       )}
     </>

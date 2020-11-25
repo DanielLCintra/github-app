@@ -13,10 +13,24 @@
       font-size: 18px;
       line-height: 20px;
     }
+    @if($tipography == 'subtitle-bold') {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+    }
     @if($tipography == 'caption') {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 200;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @if($tipography == 'caption-bold') {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
       font-size: 14px;
       line-height: 18px;
     }
