@@ -1,0 +1,51 @@
+@import '../../assets/styles/';
+
+.aside {
+    overflow:auto; 
+    -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 269px;
+    height: 100%;
+    background-color: color('neutral', '100');
+    .aside-header {
+        width: 100%;
+        height: 4em;
+        background-color: color('primary', 'default');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            @include tipography('title');
+            color: color('neutral', '100');
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.452);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.452);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.452);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    .aside-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+            @include tipography('caption-bold');
+            background-color: color('neutral', '400');
+            color: color('neutral', '700');
+            width: 70%;
+            height: 2em;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 50px;
+        }
+    }
+}

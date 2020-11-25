@@ -7,6 +7,7 @@ import CardLoading from "./CardLoading";
 import CardRepoStarred from "./CardRepoStarred";
 import Pagination from "./Pagination";
 import CardFeedback from "./CardFeedback";
+import Aside from "./Aside";
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   CardFeedback,
   CardRepoStarred,
   Pagination,
+  Aside,
 };
