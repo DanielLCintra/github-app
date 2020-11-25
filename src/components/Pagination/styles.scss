@@ -31,13 +31,15 @@
                 @include tipography('caption');
                 padding: 0 .5em;
             }
+            
         }
         .pagination {
             display: flex;
             justify-content: center;
             width: 100%;
-          }
-          
+            padding: 0;
+        }
+        
         .pagination-link {
             align-items: center;
             background-color: color('neutral', '400');
