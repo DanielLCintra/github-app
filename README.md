@@ -4,7 +4,7 @@ Olá, seja bem vindo ao projeto github app.
 
 ## Este projeto possibilita:
 
-1 - A consulta um nome de usuário do github.
+1 - A consulta de um nome de usuário do github.
 
 2 - A visualização do perfil do usuário consultado.
 
@@ -12,7 +12,7 @@ Olá, seja bem vindo ao projeto github app.
 
 4 - A visualização dos favoritos do usuário consultado.
 
-Observação: O app guarda o histório das buscas realizas e permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
+5 - O app guarda o histório das buscas realizas, permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
 
 ## Preview
 
