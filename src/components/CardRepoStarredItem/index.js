@@ -1,10 +1,12 @@
 import React from "react";
 import "./styles.scss";
 
-const CardRepoStarredItem = ({ style, title }) => {
+const CardRepoStarredItem = ({ style, name, link }) => {
   return (
     <div className="card-item" style={style}>
-      {title}
+      <a href={link} target="_blank">
+        {name}
+      </a>
     </div>
   );
 };

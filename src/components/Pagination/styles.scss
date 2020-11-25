@@ -13,18 +13,62 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 15%;
+        width: 1em;
         justify-content: space-between;
         p {
             @include tipography('caption-bold');  
         }
+    }
+    .pages{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        ul {
+            list-style:none;
+            li {
+                display: inline;
+                color: color('neutral', '800');
+                @include tipography('caption');
+                padding: 0 .5em;
+            }
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          
+        .pagination-link {
+            align-items: center;
+            background-color: color('neutral', '400');
+            color: color('neutral', '800');
+            @include tipography('caption-bold');
+            border-radius: 50px;
+            display: flex;
+            height: 30px;
+            justify-content: center;
+            min-width: 30px;
+            text-decoration: none;
+            width: 30px;
+        }
+        
+        .pagination-item:not(:first-child) {
+            .pagination-link {
+                border-left: 0;
+            }
+        }
+        .pagination-item.active .pagination-link {
+        background: #333;
+        color: #fff;
+        } 
+          
     }
     .pagination-right {
         margin-right: 1em;
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 12%;
+        width: 1em;
         justify-content: space-between;
         p {
             @include tipography('caption-bold');  

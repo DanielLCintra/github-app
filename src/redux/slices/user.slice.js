@@ -34,13 +34,29 @@ const userSlice = createSlice({
           },
         };
       },
+
       prepare({ user }) {
         return { payload: { user } };
+      },
+    },
+
+    setRepos: {
+      reducer(state, action) {
+        const { type, repos, totalPagesMatch } = action.payload;
+        state.user[type] = repos;
+        state.user[type].pagination.total = totalPagesMatch
+          ? +totalPagesMatch[1]
+          : state.user[type].pagination.total;
+        state.user[type].pagination.total_itens =
+          type === "repos" ? state.user.userinfo.public_repos : "";
+      },
+      prepare({ repos, type, totalPagesMatch }) {
+        return { payload: { repos, type, totalPagesMatch } };
       },
     },
   },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, setRepos } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -6,7 +6,14 @@ import CardRepoStarredItem from "../CardRepoStarredItem";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../Pagination";
 
-const CardRepoStarred = ({ handleClose, title }) => {
+const CardRepoStarred = ({
+  handleClose,
+  title,
+  repos = [],
+  pagination,
+  handlePagination,
+  type,
+}) => {
   return (
     <Card style={{ height: "25.5em" }}>
       <Button
@@ -21,26 +28,23 @@ const CardRepoStarred = ({ handleClose, title }) => {
         <div className="header-container">{title}</div>
 
         <div className="content-container">
-          <CardRepoStarredItem
-            style={{ width: "46%", margin: ".7em" }}
-            title="Repositório 1"
-          />
-          <CardRepoStarredItem
-            style={{ width: "46%", margin: ".7em" }}
-            title="Repositório 2"
-          />
-          <CardRepoStarredItem
-            style={{ width: "46%", margin: ".7em" }}
-            title="Repositório 3"
-          />
-          <CardRepoStarredItem
-            style={{ width: "46%", margin: ".7em" }}
-            title="Repositório 4"
-          />
+          {repos.length > 0 &&
+            repos.map((repo) => (
+              <CardRepoStarredItem
+                key={repo.name}
+                style={{ width: "46%", margin: ".7em" }}
+                name={repo.name}
+                link={repo.link}
+              />
+            ))}
         </div>
 
         <div className="bottom-container">
-          <Pagination />
+          <Pagination
+            title={title}
+            paginationData={pagination}
+            onClick={(data) => handlePagination({ ...data, type })}
+          />
         </div>
       </div>
     </Card>

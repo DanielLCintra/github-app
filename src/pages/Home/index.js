@@ -7,17 +7,19 @@ import {
   CardUser,
   CardLoading,
   CardRepoStarred,
+  CardFeedback,
 } from "../../components";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { getUser } from "../../redux/middleware";
+import { getRepos, getUser } from "../../redux/middleware";
 import { setUser } from "../../redux/slices/user.slice";
+import { unsetError } from "../../redux/slices/generics.slice";
 
 const Home = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.userReducer.user);
   const isLoading = useSelector((state) => state.genericReducer.loading);
-
+  const error = useSelector((state) => state.genericReducer.error);
   let [showRepos, setShowRepos] = useState(false);
   let [showStarred, setShowStarred] = useState(false);
   return (
@@ -38,29 +40,90 @@ const Home = () => {
         }}
       />
 
-      {isLoading && <CardLoading />}
       {!!user.userinfo.username && (
         <CardUser
           user={user}
-          handleClose={() => dispatch(setUser({ user: {} }))}
-          handleClickRepos={() => setShowRepos(true)}
-          handleClickStars={() => setShowStarred(true)}
+          handleClose={() => {
+            dispatch(setUser({ user: {} }));
+            setShowRepos(false);
+            setShowStarred(false);
+          }}
+          handleClickRepos={() => {
+            dispatch(
+              getRepos({
+                userName: user.userinfo.login,
+                type: "repos",
+                page: 1,
+              })
+            );
+            setShowRepos(true);
+          }}
+          handleClickStars={() => {
+            dispatch(
+              getRepos({
+                userName: user.userinfo.login,
+                type: "starred",
+                page: 1,
+              })
+            );
+            setShowStarred(true);
+          }}
         />
       )}
 
-      {showRepos && (
+      {!!error && (
+        <CardFeedback
+          handleClose={() => {
+            dispatch(unsetError());
+          }}
+        />
+      )}
+
+      {showRepos && !isLoading && (
         <CardRepoStarred
           title="Repositórios"
+          type="repos"
           handleClose={() => setShowRepos(false)}
+          repos={user.repos.repos}
+          pagination={user.repos.pagination}
+          handlePagination={(data) => {
+            let page =
+              data.action === "next"
+                ? data.activePage + 1
+                : data.action === "previous"
+                ? data.activePage - 1
+                : data.activePage;
+            page = page <= 0 ? 1 : page;
+            dispatch(
+              getRepos({ userName: user.userinfo.login, type: data.type, page })
+            );
+          }}
         />
       )}
 
-      {showStarred && (
+      {showStarred && !isLoading && (
         <CardRepoStarred
           title="Favoritos"
+          type="starred"
           handleClose={() => setShowStarred(false)}
+          repos={user.starred.repos}
+          pagination={user.starred.pagination}
+          handlePagination={(data) => {
+            let page =
+              data.action === "next"
+                ? data.activePage + 1
+                : data.action === "previous"
+                ? data.activePage - 1
+                : data.activePage;
+            page = page <= 0 ? 1 : page;
+            dispatch(
+              getRepos({ userName: user.userinfo.login, type: data.type, page })
+            );
+          }}
         />
       )}
+
+      {isLoading && <CardLoading />}
     </>
   );
 };

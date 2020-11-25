@@ -1,3 +1,3 @@
-import { getUser } from "./user.middleware";
+import { getUser, getRepos } from "./user.middleware";
 
-export { getUser };
+export { getUser, getRepos };

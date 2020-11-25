@@ -6,6 +6,7 @@ import CardUser from "./CardUser";
 import CardLoading from "./CardLoading";
 import CardRepoStarred from "./CardRepoStarred";
 import Pagination from "./Pagination";
+import CardFeedback from "./CardFeedback";
 
 export {
   Button,
@@ -14,6 +15,7 @@ export {
   Card,
   CardUser,
   CardLoading,
+  CardFeedback,
   CardRepoStarred,
   Pagination,
 };

@@ -4,7 +4,7 @@
     .header-container {
         text-transform: uppercase;
         top: 0;
-        @include tipography('subtitle'); 
+        @include tipography('subtitle-bold'); 
         flex-direction: column;
     }
 
@@ -16,8 +16,10 @@
     }
 
     .bottom-container {
+        position: absolute;
+        bottom: -50px;
         display: flex;
-        width: 100%;
+        width: 95%;
         margin-top: 1em;
         justify-content: center;
     }
