@@ -55,9 +55,9 @@ yarn test
 yarn storybook
 ```
 
-## Bibliotecas
+## Feito com:
 ```
-libraries: [
+Bibliotecas: [
     {
         text: 'React.js',
         href: 'https://pt-br.reactjs.org/'
@@ -66,7 +66,34 @@ libraries: [
         text: 'Redux',
         href: 'https://redux.js.org/'
     },
-    and more...
+    {
+        text: 'Redux Thunk',
+        href: 'https://redux-toolkit.js.org/'
+    },
+    {
+        text: 'Redux Toolkit',
+        href: 'https://github.com/reduxjs/redux-thunk'
+    },
+    {
+        text: 'FontAwesome',
+        href: 'http://fontawesome.com/'
+    },
+    {
+        text: 'LocalForage',
+        href: 'https://localforage.github.io/localForage/'
+    },
+    {
+        text: 'Storybook',
+        href: 'https://storybook.js.org/'
+    },
+    {
+        text: 'Axios',
+        href: 'https://github.com/axios/axios'
+    },
+    {
+        text: 'Sass',
+        href: 'https://sass-lang.com/'
+    }
    ]
 ```
 .
