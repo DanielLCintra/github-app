@@ -46,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="main-container">
       {showAside && (
         <Aside
           label="Histórico"
@@ -120,6 +120,7 @@ const Home = () => {
 
       {showRepos && !isLoading && (
         <CardRepoStarred
+          style={{ marginTop: "5em" }}
           title="Repositórios"
           type="repos"
           handleClose={() => setShowRepos(false)}
@@ -142,6 +143,7 @@ const Home = () => {
 
       {showStarred && !isLoading && (
         <CardRepoStarred
+          style={{ marginTop: showRepos ? "8em" : "5em" }}
           title="Favoritos"
           type="starred"
           handleClose={() => setShowStarred(false)}
@@ -163,7 +165,7 @@ const Home = () => {
       )}
 
       {isLoading && <CardLoading />}
-    </>
+    </div>
   );
 };
 

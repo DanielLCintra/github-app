@@ -14,9 +14,10 @@ export const CardRepoStarred = ({
   pagination,
   handlePagination,
   type,
+  style,
 }) => {
   return (
-    <Card style={{ height: "25.5em" }}>
+    <Card style={style}>
       <Button
         icon={faTimes}
         rounded
@@ -25,22 +26,21 @@ export const CardRepoStarred = ({
         style={{ position: "absolute", right: "3em", top: 0, zIndex: 99 }}
         onClickHandler={() => handleClose()}
       />
-      <div className="card-container">
-        <div className="header-container">{title}</div>
+      <div className="card-repo-starred-container">
+        <div className="card-repo-starred-header-container">{title}</div>
 
-        <div className="content-container">
+        <div className="card-repo-starred-content-container">
           {repos.length > 0 &&
             repos.map((repo) => (
               <CardRepoStarredItem
                 key={repo.name}
-                style={{ width: "46%", margin: ".7em" }}
                 name={repo.name}
                 link={repo.link}
               />
             ))}
         </div>
 
-        <div className="bottom-container">
+        <div className="card-repo-starred-bottom-container">
           <Pagination
             title={title}
             paginationData={pagination}

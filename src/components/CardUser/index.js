@@ -22,10 +22,10 @@ export const CardUser = ({
         style={{ position: "absolute", right: "3em", top: 0, zIndex: 99 }}
         onClickHandler={() => handleClose()}
       />
-      <div className="card-container">
-        <div className="header">PERFIL</div>
+      <div className="card-user-container">
+        <div className="card-user-header-container">PERFIL</div>
 
-        <div className="content-container">
+        <div className="card-user-content-container">
           <div className="main-title">
             <Avatar image={user.userinfo.photo} size="big" />
 

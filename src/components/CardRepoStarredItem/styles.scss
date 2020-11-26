@@ -2,6 +2,11 @@
 
 .card-item{
     height: 114px;
+    @media only screen and (min-width: 700px) {
+        width: 46%;
+        height: 114px;
+    }
+    margin: .5em;
     background-color: color('neutral', '200');
     border-radius: 25px;
     display: flex;

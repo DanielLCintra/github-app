@@ -1,29 +1,41 @@
 @import '../../assets/styles/';
 
-.card-container{
-    .header-container {
+.card-repo-starred-container {
+    @media only screen and (min-width: 700px) {
+        height: 25em;
+    }
+    height: 40em;
+    justify-content: space-between;
+    padding: 1em 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .card-repo-starred-header-container {
         text-transform: uppercase;
-        top: 0.5em;
         @include tipography('subtitle-bold'); 
         flex-direction: column;
         justify-content: center;
         align-items: center;
         display: flex;
-    }
-
-    .content-container {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .bottom-container {
         position: absolute;
-        bottom: -50px;
+        top: 0.7em;
+    }
+
+    .card-repo-starred-content-container {
+        @media only screen and (min-width: 700px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        width: 90%;
+        margin-top: 2em;
+    }
+
+    .card-repo-starred-bottom-container {
         display: flex;
-        width: 95%;
-        margin-top: 1em;
         justify-content: center;
+        width: 90%;
+        margin-top: 2em;
     }
 }

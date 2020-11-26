@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export const CardLoading = () => {
   return (
-    <Card>
+    <Card style={{ marginTop: "1em" }}>
       <div className="loading-container">
         <FontAwesomeIcon icon={faSpinner} size="6x" spin />
         <span className="loading-text">Buscando</span>

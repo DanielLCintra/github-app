@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 
 export const CardFeedback = ({ handleClose, title }) => {
   return (
-    <Card>
+    <Card clsName="card-feedback">
       <Button
         icon={faTimes}
         rounded
