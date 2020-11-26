@@ -50,6 +50,11 @@ yarn build
 yarn test
 ```
 
+### Executar storybook para ver o guia de estilo de componentes
+```
+yarn storybook
+```
+
 ## Bibliotecas
 ```
 libraries: [

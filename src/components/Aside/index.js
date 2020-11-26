@@ -1,9 +1,16 @@
 import React from "react";
 import "./styles.scss";
-import Button from "../Button";
+import { Button } from "../Button";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 
-const Aside = ({ label, handleClose, style, items = [], handleItemClick }) => {
+export const Aside = ({
+  label,
+  handleClose,
+  style,
+  items,
+  handleItemClick,
+}) => {
   return (
     <div className="aside" style={style}>
       <div className="aside-header">
@@ -35,4 +42,17 @@ const Aside = ({ label, handleClose, style, items = [], handleItemClick }) => {
   );
 };
 
-export default Aside;
+Aside.propTypes = {
+  label: PropTypes.string.isRequired,
+  handleClose: PropTypes.func,
+  style: PropTypes.object,
+  items: PropTypes.array,
+  handleItemClick: PropTypes.func,
+};
+
+Aside.defaultProps = {
+  handleClose: () => alert("Clicou no fechar"),
+  style: {},
+  items: [{ id: "1", value: "Item 1" }],
+  handleItemClick: () => alert("Clicou no item"),
+};

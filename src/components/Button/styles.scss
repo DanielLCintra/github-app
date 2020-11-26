@@ -4,6 +4,7 @@
     border: 0;
     background: none;
     text-transform: uppercase;
+    cursor: pointer;
      @include tipography('button');
     &:focus {
         outline: none !important;
@@ -11,6 +12,14 @@
     &.state-accent {
         background-color: color('primary', 'accent');
         color: color('primary', 'dark');
+    }
+    &.state-default {
+        background-color: transparent;
+        color: color('primary', 'dark');
+    }
+    &.state-dark {
+        background-color: color('primary', 'dark');
+        color: color('neutral', '100');
     }
     &.rounded {
         border-radius: 51px;

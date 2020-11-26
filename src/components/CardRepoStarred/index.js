@@ -1,15 +1,16 @@
 import React from "react";
-import Card from "../Card";
+import { Card } from "../Card";
 import "./styles.scss";
-import Button from "../Button";
-import CardRepoStarredItem from "../CardRepoStarredItem";
+import { Button } from "../Button";
+import { CardRepoStarredItem } from "../CardRepoStarredItem";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "../Pagination";
+import { Pagination } from "../Pagination";
+import PropTypes from "prop-types";
 
-const CardRepoStarred = ({
+export const CardRepoStarred = ({
   handleClose,
   title,
-  repos = [],
+  repos,
   pagination,
   handlePagination,
   type,
@@ -51,4 +52,20 @@ const CardRepoStarred = ({
   );
 };
 
-export default CardRepoStarred;
+CardRepoStarred.propTypes = {
+  handleClose: PropTypes.func,
+  title: PropTypes.string,
+  repos: PropTypes.array,
+  pagination: PropTypes.object,
+  handlePagination: PropTypes.func,
+  type: PropTypes.string,
+};
+
+CardRepoStarred.defaultProps = {
+  handleClose: () => alert("clicou no fechar"),
+  title: "Título",
+  repos: [{}],
+  pagination: { total: 1, activePage: 1 },
+  handlePagination: () => alert("clicou na paginação"),
+  type: "repos",
+};

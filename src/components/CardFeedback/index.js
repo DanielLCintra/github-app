@@ -1,11 +1,12 @@
 import React from "react";
-import Card from "../Card";
+import { Card } from "../Card";
 import { faExclamation, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.scss";
-import Button from "../Button";
+import { Button } from "../Button";
+import PropTypes from "prop-types";
 
-const CardFeedback = ({ handleClose }) => {
+export const CardFeedback = ({ handleClose, title }) => {
   return (
     <Card>
       <Button
@@ -20,10 +21,18 @@ const CardFeedback = ({ handleClose }) => {
         <div className="feedback-icon">
           <FontAwesomeIcon icon={faExclamation} size="3x" color="#8990A2" />
         </div>
-        <span className="feedback-text">Usuário não encontrado</span>
+        <span className="feedback-text">{title}</span>
       </div>
     </Card>
   );
 };
 
-export default CardFeedback;
+CardFeedback.propTypes = {
+  handleClose: PropTypes.func,
+  title: PropTypes.string,
+};
+
+CardFeedback.defaultProps = {
+  handleClose: () => alert("Clicou no fechar"),
+  title: "Usuário não encontrado",
+};

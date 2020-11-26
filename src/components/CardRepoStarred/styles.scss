@@ -3,9 +3,12 @@
 .card-container{
     .header-container {
         text-transform: uppercase;
-        top: 0;
+        top: 0.5em;
         @include tipography('subtitle-bold'); 
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
 
     .content-container {

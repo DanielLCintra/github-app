@@ -1,0 +1,33 @@
+@import '../../assets/styles/';
+
+li {
+    display: inline;
+    color: color('neutral', '800');
+    @include tipography('caption');
+    padding: 0 .5em;
+    text-decoration: none;
+}
+
+.pagination-item:not(:first-child) {
+    .pagination-link {
+        border-left: 0;
+    }
+}
+.pagination-item.active .pagination-link {
+background: #333;
+color: #fff;
+} 
+
+.pagination-link {
+    align-items: center;
+    background-color: color('neutral', '400');
+    color: color('neutral', '800');
+    @include tipography('caption-bold');
+    border-radius: 50px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    min-width: 30px;
+    text-decoration: none;
+    width: 30px;
+}

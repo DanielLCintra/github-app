@@ -1,13 +1,16 @@
-import Button from "./Button";
-import TopHeader from "./TopHeader";
-import Input from "./Input";
-import Card from "./Card";
-import CardUser from "./CardUser";
-import CardLoading from "./CardLoading";
-import CardRepoStarred from "./CardRepoStarred";
-import Pagination from "./Pagination";
-import CardFeedback from "./CardFeedback";
-import Aside from "./Aside";
+import { Button } from "./Button";
+import { TopHeader } from "./TopHeader";
+import { Input } from "./Input";
+import { Card } from "./Card";
+import { CardUser } from "./CardUser";
+import { CardLoading } from "./CardLoading";
+import { CardRepoStarred } from "./CardRepoStarred";
+import { CardRepoStarredItem } from "./CardRepoStarredItem";
+import { Pagination } from "./Pagination";
+import { Page } from "./Page";
+import { CardFeedback } from "./CardFeedback";
+import { Avatar } from "./Avatar";
+import { Aside } from "./Aside";
 
 export {
   Button,
@@ -18,6 +21,9 @@ export {
   CardLoading,
   CardFeedback,
   CardRepoStarred,
+  CardRepoStarredItem,
   Pagination,
   Aside,
+  Avatar,
+  Page,
 };

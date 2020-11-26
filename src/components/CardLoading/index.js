@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "../Card";
+import { Card } from "../Card";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.scss";
 
-const CardLoading = () => {
+export const CardLoading = () => {
   return (
     <Card>
       <div className="loading-container">
@@ -14,5 +14,3 @@ const CardLoading = () => {
     </Card>
   );
 };
-
-export default CardLoading;

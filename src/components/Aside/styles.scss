@@ -37,6 +37,7 @@
         align-items: center;
         flex-direction: column;
         p {
+            cursor: pointer;
             @include tipography('caption-bold');
             background-color: color('neutral', '400');
             color: color('neutral', '700');

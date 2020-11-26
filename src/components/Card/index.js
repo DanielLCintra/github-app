@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.scss";
+import PropTypes from "prop-types";
 
-const Card = ({ children, style }) => {
+export const Card = ({ children, style }) => {
   return (
     <div className="card-container" style={style}>
       <div className="card">{children}</div>
@@ -9,4 +10,7 @@ const Card = ({ children, style }) => {
   );
 };
 
-export default Card;
+Card.propTypes = {
+  children: PropTypes.any,
+  style: PropTypes.object,
+};

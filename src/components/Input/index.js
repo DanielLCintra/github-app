@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./styles.scss";
-import Button from "../Button";
+import { Button } from "../Button";
+import PropTypes from "prop-types";
 
-const Input = ({
+export const Input = ({
   placeholder,
   icon,
   iconSize,
@@ -31,6 +32,7 @@ const Input = ({
         <Button
           icon={icon}
           size={iconSize}
+          state="default"
           style={{ position: "absolute", right: "3em" }}
           onClickHandler={() => handleClick(value)}
         />
@@ -39,4 +41,19 @@ const Input = ({
   );
 };
 
-export default Input;
+Input.propTypes = {
+  placeholder: PropTypes.string,
+  icon: PropTypes.any,
+  iconSize: PropTypes.string,
+  handleEnter: PropTypes.func,
+  handleClick: PropTypes.func,
+  value: PropTypes.string,
+  handleOnChange: PropTypes.func,
+};
+
+Input.defaultProps = {
+  placeholder: "Placeholder",
+  handleEnter: () => alert("Clicou no fechar"),
+  handleClick: () => alert("Clicou no fechar"),
+  handleOnChange: () => alert("Clicou no fechar"),
+};

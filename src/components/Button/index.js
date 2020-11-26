@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 
-const Button = ({
+export const Button = ({
   label,
   onClickHandler,
   rounded = false,
@@ -26,4 +27,21 @@ const Button = ({
   );
 };
 
-export default Button;
+Button.propTypes = {
+  label: PropTypes.string,
+  onClickHandler: PropTypes.func,
+  rounded: PropTypes.bool,
+  state: PropTypes.string,
+  size: PropTypes.string,
+  iconSize: PropTypes.string,
+  style: PropTypes.object,
+  icon: PropTypes.any,
+};
+
+Button.defaultProps = {
+  label: "",
+  onClickHandler: () => alert("Clicou no botão"),
+  rounded: true,
+  state: "accent",
+  size: "big",
+};

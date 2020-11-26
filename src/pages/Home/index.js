@@ -36,6 +36,15 @@ const Home = () => {
     }
   }, []);
 
+  const search = (value) => {
+    dispatch(setUser({ user: {} }));
+    dispatch(getUser(value));
+    dispatch(addHistoric({ id: +new Date(), value: value }, historic));
+    setShowRepos(false);
+    setShowStarred(false);
+    dispatch(unsetError());
+  };
+
   return (
     <>
       {showAside && (
@@ -47,8 +56,7 @@ const Home = () => {
           items={historic}
           handleItemClick={(item) => {
             setValue(item.value);
-            dispatch(setUser({ user: {} }));
-            dispatch(getUser(item.value));
+            search(item.value);
           }}
         />
       )}
@@ -60,24 +68,14 @@ const Home = () => {
         icon={faSearch}
         iconSize="4x"
         handleEnter={(e) => {
-          dispatch(setUser({ user: {} }));
-          dispatch(getUser(e.target.value));
-          dispatch(
-            addHistoric({ id: +new Date(), value: e.target.value }, historic)
-          );
-          setShowRepos(false);
-          setShowStarred(false);
+          search(e.target.value);
         }}
         value={value}
         handleOnChange={(e) => {
           setValue(e.target.value);
         }}
         handleClick={(value) => {
-          dispatch(setUser({ user: {} }));
-          dispatch(getUser(value));
-          dispatch(addHistoric({ id: +new Date(), value: value }, historic));
-          setShowStarred(false);
-          setShowRepos(false);
+          search(value);
         }}
       />
 

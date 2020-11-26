@@ -1,9 +1,10 @@
 import React from "react";
 import "./styles.scss";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Button from "../Button";
+import { Button } from "../Button";
+import PropTypes from "prop-types";
 
-const TopHeader = ({ handleClick }) => {
+export const TopHeader = ({ handleClick, title }) => {
   return (
     <div className="top-header">
       <Button
@@ -14,9 +15,17 @@ const TopHeader = ({ handleClick }) => {
         style={{ position: "absolute", left: "1.5em" }}
         onClickHandler={() => handleClick()}
       />
-      <div className="title">Github App</div>
+      <div className="title">{title}</div>
     </div>
   );
 };
 
-export default TopHeader;
+TopHeader.propTypes = {
+  handleClick: PropTypes.func,
+  title: PropTypes.string,
+};
+
+TopHeader.defaultProps = {
+  title: "Github App",
+  handleClick: () => alert("Clicou no botão do topo"),
+};

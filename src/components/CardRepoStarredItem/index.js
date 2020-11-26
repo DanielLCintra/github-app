@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.scss";
+import PropTypes from "prop-types";
 
-const CardRepoStarredItem = ({ style, name, link }) => {
+export const CardRepoStarredItem = ({ style, name, link }) => {
   return (
     <div className="card-item" style={style}>
       <a href={link} target="_blank">
@@ -11,4 +12,13 @@ const CardRepoStarredItem = ({ style, name, link }) => {
   );
 };
 
-export default CardRepoStarredItem;
+CardRepoStarredItem.propTypes = {
+  style: PropTypes.object,
+  name: PropTypes.string,
+  link: PropTypes.string,
+};
+
+CardRepoStarredItem.defaultProps = {
+  name: "Item",
+  link: window.location.href,
+};

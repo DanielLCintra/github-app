@@ -1,11 +1,12 @@
 import React from "react";
-import Card from "../Card";
-import Avatar from "../Avatar";
+import { Card } from "../Card";
+import { Avatar } from "../Avatar";
 import "./styles.scss";
-import Button from "../Button";
+import { Button } from "../Button";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 
-const CardUser = ({
+export const CardUser = ({
   user,
   handleClose,
   handleClickRepos,
@@ -72,4 +73,15 @@ const CardUser = ({
   );
 };
 
-export default CardUser;
+CardUser.propTypes = {
+  user: PropTypes.object,
+  handleClose: PropTypes.func,
+  handleClickRepos: PropTypes.func,
+  handleClickStars: PropTypes.func,
+};
+
+CardUser.defaultProps = {
+  handleClose: () => alert("Clicou no fechar"),
+  handleClickRepos: () => alert("Clicou no fechar"),
+  handleClickStars: () => alert("Clicou no fechar"),
+};

@@ -6,4 +6,16 @@
         height: 200px;
         border-radius: 120px;
     }
+
+    &.size-medium {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+
+    &.size-small {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
 }
