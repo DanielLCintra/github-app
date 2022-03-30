@@ -22,11 +22,11 @@ Hello, welcome to the github app project.
 
 ## Prototype in Figma
 
-[Visualizar](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
+[Access](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
 
 ## Demonstration
-[Visualizar](https://github-app-d.herokuapp.com/)
+[Access](https://github-app-d.herokuapp.com/)
 
 
 ## Project Installation
