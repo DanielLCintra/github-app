@@ -1,63 +1,67 @@
 # Github App
 
-Olá, seja bem vindo ao projeto github app.
+Hello, welcome to the github app project.
 
-## Este projeto possibilita:
+## This project allows:
 
-1 - A consulta de um nome de usuário do github.
+1 - The query for a username from github.
 
-2 - A visualização do perfil do usuário consultado.
+2 - Viewing the profile of the consulted user.
 
-3 - A visualização dos repositórios do usuário consultado.
+3 - Visualization of the consulted user repositories.
 
-4 - A visualização dos favoritos do usuário consultado.
+4 - Viewing the consulted user's favorites.
 
-5 - O app guarda o histório das buscas realizas, permite que através de um menu lateral o usuário visualize tudo que já foi buscado anteriormente e possa clicar em um item e refazer a busca.
+5 - The app stores the history of searches performed, allows the user to view everything that has been previously searched through a side menu and can click on an item and redo the search.
+
 
 ## Preview
 
 ![My image](https://daniellcintra.github.io/images/githubapp.png)
 
-## Protótipo no Figma
+
+## Prototype in Figma
 
 [Visualizar](https://www.figma.com/file/uC3Xz8D8U9PbvnNTGPNg2b/Github-App?node-id=0%3A1)
 
-## Demonstração
+
+## Demonstration
 [Visualizar](https://github-app-d.herokuapp.com/)
 
-## Instalação do Projeto
+
+## Project Installation
 ```
-yarn install
+yarn 
 ```
 
-### Compilar e hot reload para desenvolvimento
+### Compile and hot reload for development
 ```
 yarn dev
 ```
 
-### Rodar bundle de produção
+### Run production bundle
 ```
 yarn start
 ```
 
-### Compilar e minificar para produção
+### Compile and minify for production
 ```
 yarn build
 ```
 
-### Executar testes
+### Run tests
 ```
 yarn test
 ```
 
-### Executar storybook para ver o guia de estilo de componentes
+### Run storybook to see component style guide
 ```
 yarn storybook
 ```
 
-## Feito com:
+## Built with:
 ```
-Bibliotecas: [
+Librarires: [
     {
         text: 'React.js',
         href: 'https://pt-br.reactjs.org/'
